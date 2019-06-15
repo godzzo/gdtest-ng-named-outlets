@@ -26,15 +26,20 @@ const parts: Routes = [
   {path: 'blue', component: BlueFooterComponent, outlet: 'footer'}
 ];
 
-const contents: Routes = [
+const sidebar: Routes = [
   {path: 'books', component: BooksComponent, outlet: 'sidebar'},
   {path: 'games', component: GamesComponent, outlet: 'sidebar'}
 ];
 
-const routes: Routes = [...pages, ...parts, ...contents];
+const contents: Routes = [
+  {path: 'books', component: BooksComponent, outlet: 'content'},
+  {path: 'games', component: GamesComponent, outlet: 'content'}
+];
+
+const routes: Routes = [...pages, ...parts, ...contents, ...sidebar];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
