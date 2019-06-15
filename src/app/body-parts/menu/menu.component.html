@@ -1,0 +1,28 @@
+<div class="menu">
+  <p>
+    menu works!
+  </p>
+  <ul>
+    <li>
+      <a [routerLink]="[{ outlets: { sidebar: ['games'] } }]">Games to SideBar</a>
+    </li>
+    <li>
+      <a [routerLink]="[{ outlets: { sidebar: ['books'] } }]">Books to SideBar</a>
+    </li>
+    <li>
+      <a [routerLink]="'about'">Switch to About page</a>
+    </li>
+    <li>
+      <a [routerLink]="'main'">Switch to Main page</a>
+    </li>
+    <li>
+      <a [routerLink]="'search'">Switch to Search page</a>
+    </li>
+    <li>
+      <a [routerLink]="[{ outlets: { header: ['green'], footer: ['green'] } }]">Go Green for Header and Footer</a>
+    </li>
+    <li>
+        <a [routerLink]="[{ outlets: { header: ['blue'], footer: ['blue'] } }]">Go Blue for Header and Footer</a>
+    </li>
+  </ul>
+</div>
